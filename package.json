@@ -1,0 +1,19 @@
+{
+  "name": "glucometro",
+  "version": "1.0.0",
+  "description": "Graficador de glucosa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "JavaScript"
+  ],
+  "author": "Marco Antonio Rivera C.",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^3.7.1",
+    "require": "^2.4.20"
+  }
+}

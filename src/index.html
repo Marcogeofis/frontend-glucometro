@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Glucometro</title>
+</head>
+<body>
+    <main>
+        <h2 class="title-app">Glucometro</h2>
+
+        <div class="container_imagenes">
+            <figure>
+                <img src="../assets/Glucometro.png" alt="glucometro">
+                <img src="../assets/presion.png" alt="medidor de presion">
+                <img src="../assets/sport.png" alt="persona ejercitandose">
+                <img src="../assets/alimentos.png" alt="verduras">
+            </figure>
+        </div>
+        <p class="intro-App">
+            Por medio de ésta herramienta graficaremos los datos que proporciones para ver la tendencia de tus niveles de glucosa. <br>
+            Es importante también considerar otros factores como tu estado emocional al dia. <br> Así, podras ver que alimentos te aportan un mejor control de azucares
+            o de lo contrario evaluar otras opciones de esquemas alimenticios. 
+        </p>
+
+        <div class="container_corazon">
+            <figure>
+                <img src="../assets/heart.png" alt="corazon">
+            </figure>
+        </div>
+        <p class="uso-App">
+            Para usar esta aplicación sigue lo siguientes pasos.
+        </p>
+
+        <ul class="instrucciones-uso">
+            <li>1.- Ingresa tus datos</li>
+            <li>2.- Llena los campos que te solicitan</li>
+            <li>3.- Si es la primera vez que usas esta aplicaión tendras que ir llenando los campos
+                todos los dias que realizas tus chequeos
+            </li>
+            <li>4.- En caso de tener un registro, puedes evaluar el mes o semana que selecciones</li>
+        </ul>
+
+        <form id="form">
+            
+            <div class="datos-intro">Nombre: <input type="text" class="box_data" id="nom"></div>
+            <div class="datos-intro">Edad: <input type="text" class="box_data" id="edad"></div>
+            <div class="datos-intro">Fecha: <input type="text" class="box_data" id="fecha"></div>
+            <div class="datos-intro">Hora: <input type="text" class="box_data" id="hora"></div>
+            <div class="datos-intro">Nivel de Azucar: <input type="text" class="box_data" id="azucar"></div>
+            <div class="datos-intro">Nivel de Presión Alta: <input type="text" class="box_data" id="pa"></div>
+            <div class="datos-intro">Nivel de Presión Baja: <input type="text" class="box_data" id="pb"></div>
+            <div class="datos-intro">Número de Latidos: <input type="text" class="box_data" id="lat"></div>
+            
+        </form>
+        <section class="data-graphic">
+            <h3>Haz click para ingresar datos</h3>
+            <div class="graphic-periode">
+                <button class="ingresar_datos" onclick="getData(nom, edad, fecha, hora, azucar, pa, pb, lat)">Ingresar datos </button>
+            </div>
+            <script src="./index.js"></script>
+        </section>
+        <section class="data-graphic">
+            <h3>¿Qué periodo quieres ver?</h3>
+            <div class="graphic-periode">
+                <div class="periodo">Periodo: <input type="text" class="box_data"></div>   
+                <button class="graphycator">Graficar datos </button>
+            </div>
+        </section>
+    </main>
+    
+    <canvas id="miTabla" width="600" height="600"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.js"></script>
+    <script type="module">
+        import bd from './Data.js'
+    
+            function glucometer(ctx){
+                const {
+                    dataGlucosa,
+                } = bd;
+
+                const tabla = new Chart(ctx, { 
+                    type: 'line',
+                    data: {
+                        labels: dataGlucosa.Registros.map(item => item.date),
+                        datasets:[{
+                            label: 'Glucometro',
+                            data: dataGlucosa.n_Glucosa.map(item => item.value),
+                            backgroundColor: 'rgb(73, 255, 0)',
+                            borderColor: 'rgb(73, 255, 0, .2)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Presion Alta',
+                            data: dataGlucosa.n_PresionAlta.map(item => item.value),
+                            backgroundColor: 'rgb(0, 255, 255)',
+                            borderColor: 'rgb(0, 255, 255, .2)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Presion Baja',
+                            data: dataGlucosa.n_PresionBaja.map(item => item.value),
+                            backgroundColor: 'rgb(240, 248, 255)',
+                            borderColor: 'rgb(240, 248, 255, .2)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Latidos',
+                            data: dataGlucosa.n_Latidos.map(item => item.value),
+                            backgroundColor: 'rgb(255, 0, 0)',
+                            borderColor: 'rgb(255, 0, 0, .2)',
+                            borderWidth: 1
+                        }],
+                    options:{
+                        plugins: {
+                            fontColor: '#fff',
+                        },
+                        scales:{
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                    }
+
+
+                }
+            });    
+        }
+
+
+            function renderTabla(){
+                const ctx = document.getElementById('miTabla').getContext('2d');
+                // console.log(ctx);
+                glucometer(ctx);
+             }
+
+            renderTabla();             
+    </script>
+    <footer></footer>
+</body>
+</html>

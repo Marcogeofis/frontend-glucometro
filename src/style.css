@@ -32,9 +32,8 @@ body{
 }
 .intro-App{
     width:auto;
-    height: 300px;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 15px;   
 }
 .container_corazon figure {
@@ -49,35 +48,41 @@ body{
     height: 150px;
 }
 .uso-App{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-align: center;
     margin-top: 10px;
     width: auto;
-    height: 100px;
     padding: 15px;
 }
 .instrucciones-uso{
     width: auto;
     height: 240px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 15px;
 }
+.points{
+    margin: 10px 10px;
+}
 #form{
-    display: flex;
-    background-color: #191A19;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    color: #125B50;
+    background-color: #d4f5d4;
     width: auto;
-    height: 400px;
+    height: 310px;
     padding: 15px;
     margin: 20px 0;
 }
 .datos-intro{
     margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
 }
 .box_data{
-    width: 120px;
+    width: 150px;
+    height: 24px;
+    background-color:  #d3ece9;
+    border-radius: 5px;
+    text-align: center;
+    
 }
 .datos-intro{
     font-size: 1.3rem;
@@ -98,6 +103,9 @@ body{
     flex-direction: column;
 }
 .graphycator{
+    color: #125B50;
+    border: none;
+    border-radius: 30px;
     width: 200px;
     height: 40px;
     margin: 10px 0;
@@ -112,11 +120,6 @@ body{
     width: auto;
     height: 600px;
     
-}
-button{
-    color: #125B50;
-    border: none;
-    border-radius: 30px;
 }
 canvas{
     margin-top: 30px;

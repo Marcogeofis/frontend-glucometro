@@ -22,10 +22,10 @@
             </figure>
         </div>
         <p class="intro-App">
-            Por medio de ésta herramienta graficaremos los datos que proporciones para ver la tendencia de tus niveles de glucosa. <br>
-            Es importante también considerar otros factores como tu estado emocional al dia. <br> Así, podras ver que alimentos te aportan un mejor control de azucares
-            o de lo contrario evaluar otras opciones de esquemas alimenticios. 
-        </p>
+            Por medio de ésta herramienta graficaremos los datos que proporciones para ver la tendencia de tus niveles de glucosa.        </p>
+        <p class="intro-App">Es importante también considerar otros factores como tu estado emocional al dia.</p>
+        <p class="intro-App">Así, podras ver que alimentos te aportan un mejor control de azucares
+            o de lo contrario evaluar otras opciones de esquemas alimenticios. </p>
 
         <div class="container_corazon">
             <figure>
@@ -37,30 +37,30 @@
         </p>
 
         <ul class="instrucciones-uso">
-            <li>1.- Ingresa tus datos</li>
-            <li>2.- Llena los campos que te solicitan</li>
-            <li>3.- Si es la primera vez que usas esta aplicaión tendras que ir llenando los campos
+            <li class="points instructions">1.- Ingresa tus datos</li>
+            <li class="points instructions">2.- Llena los campos que te solicitan</li>
+            <li class="points instructions">3.- Si es la primera vez que usas esta aplicaión tendras que ir llenando los campos
                 todos los dias que realizas tus chequeos
             </li>
-            <li>4.- En caso de tener un registro, puedes evaluar el mes o semana que selecciones</li>
+            <li class="points instructions">4.- En caso de tener un registro, puedes evaluar el mes o semana que selecciones</li>
         </ul>
 
         <form id="form">
             
-            <div class="datos-intro">Nombre: <input type="text" class="box_data" id="nom"></div>
-            <div class="datos-intro">Edad: <input type="text" class="box_data" id="edad"></div>
-            <div class="datos-intro">Fecha: <input type="text" class="box_data" id="fecha"></div>
-            <div class="datos-intro">Hora: <input type="text" class="box_data" id="hora"></div>
-            <div class="datos-intro">Nivel de Azucar: <input type="text" class="box_data" id="azucar"></div>
-            <div class="datos-intro">Nivel de Presión Alta: <input type="text" class="box_data" id="pa"></div>
-            <div class="datos-intro">Nivel de Presión Baja: <input type="text" class="box_data" id="pb"></div>
-            <div class="datos-intro">Número de Latidos: <input type="text" class="box_data" id="lat"></div>
+            <div class="datos-intro">Nombre: <input type="text" class="box_data" id="nom" placeholder="Nombre"></div>
+            <div class="datos-intro">Edad: <input type="text" class="box_data" id="edad" placeholder="Edad"></div>
+            <div class="datos-intro">Fecha: <input type="text" class="box_data" id="fecha" placeholder="Fecha"></div>
+            <div class="datos-intro">Hora: <input type="text" class="box_data" id="hora" placeholder="Hora"></div>
+            <div class="datos-intro">Nivel de Azucar: <input type="text" class="box_data" id="azucar" placeholder="Glucosa"></div>
+            <div class="datos-intro">Nivel de Presión Alta: <input type="text" class="box_data" id="pa" placeholder="P. alta"></div>
+            <div class="datos-intro">Nivel de Presión Baja: <input type="text" class="box_data" id="pb" placeholder="P. baja"></div>
+            <div class="datos-intro">Número de Latidos: <input type="text" class="box_data" id="lat" placeholder="Latidos"></div>
             
         </form>
         <section class="data-graphic">
             <h3>Haz click para ingresar datos</h3>
             <div class="graphic-periode">
-                <button class="ingresar_datos" onclick="getData(nom, edad, fecha, hora, azucar, pa, pb, lat)">Ingresar datos </button>
+                <button class="graphycator" onclick="getData()">Ingresar datos </button>
             </div>
             <script src="./index.js"></script>
         </section>
@@ -140,6 +140,7 @@
 
             renderTabla();             
     </script>
+    <script src="./index.js"></script>
     <footer></footer>
 </body>
 </html>

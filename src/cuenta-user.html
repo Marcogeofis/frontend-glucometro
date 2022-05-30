@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 930px)">
-    <title>Glucometro</title>
+    <title>Glucometro User</title>
 </head>
 <body>
-    <main>
+        <!-- Bienvenida -->
+    <section class="container-session">
         <h2 class="title-app">Glucometro</h2>
-
         <div class="container_imagenes">
             <figure>
                 <img src="../assets/Glucometro.png" alt="glucometro">
@@ -21,52 +21,28 @@
                 <img src="../assets/alimentos.png" alt="verduras">
             </figure>
         </div>
-        <div class="introduccion">
+        <h3 class="title-session">Bienvenido!!</h3>
             <p class="intro-App">
-                Por medio de ésta herramienta graficaremos los datos que proporciones para ver la tendencia de tus niveles de glucosa.        </p>
-            <p class="intro-App">Es importante también considerar otros factores como tu estado emocional al dia.</p>
-            <p class="intro-App">Así, podras ver que alimentos te aportan un mejor control de azucares
-                o de lo contrario evaluar otras opciones de esquemas alimenticios. </p>
+                No olvides hacer tu chequeo diario y registrar tus datos para ver tu gráfica de tus registros. 
+            </p>
+    </section>
+    <form id="form"> 
+        <div class="datos-intro">Nombre: <input type="text" class="box_data" id="nombre" placeholder="Nombre"></div>
+        <div class="datos-intro">Edad: <input type="text" class="box_data" id="edad" placeholder="Edad"></div>
+        <div class="datos-intro">Fecha: <input type="text" class="box_data" id="fecha" placeholder="Fecha"></div>
+        <div class="datos-intro">Hora: <input type="text" class="box_data" id="hora" placeholder="Hora"></div>
+        <div class="datos-intro">Nivel de Azucar: <input type="text" class="box_data" id="azucar" placeholder="Glucosa"></div>
+        <div class="datos-intro">Nivel de Presión Alta: <input type="text" class="box_data" id="pa" placeholder="P. alta"></div>
+        <div class="datos-intro">Nivel de Presión Baja: <input type="text" class="box_data" id="pb" placeholder="P. baja"></div>
+        <div class="datos-intro">Número de Latidos: <input type="text" class="box_data" id="lat" placeholder="Latidos"></div> 
+    </form>
+    <section class="data-user">
+        <h3>Haz click para ingresar datos</h3>
+        <div class="graphic-user">
+            <button class="graphycator" onclick="getData()">Ingresar datos </button>
         </div>
-        
-
-        <div class="container_corazon">
-            <figure>
-                <img src="../assets/heart.png" alt="corazon">
-            </figure>
-        </div>
-        <p class="uso-App">
-            Para usar esta aplicación sigue los siguientes pasos.
-        </p>
-
-        <ul class="instrucciones-uso">
-            <li class="points instructions"> Si es la primera vez que usas esta aplicación porfavor registrate</li>
-            <li class="points instructions"> Tendras que ir llenando los campos todos los dias que realizas tus chequeos para graficarlos
-            </li>
-            <li class="points instructions"> En caso de tener una cuenta, inicia sesión</li>
-        </ul>
-        <section class="container-loggin">
-            <div class="logging-user">
-                <a href="sesion.html" target="_blank">Iniciar sesión</a>
-                <a href="cuenta-user.html" target="_blank">Registrar me</a>
-            </div>
-        </section>
-        <section>
-            <div class="container-recomend">
-                <p class="uso-App">
-                    En la gráfica de abajo es una representación de la tendencia de los datos que tu registres y puedas ver su comportamiento de tu dia a dia.
-                </p>
-                <p class="uso-App">    
-                    Los Datos graficados son <strong>glucosa</strong>, <strong>presión arterial alta</strong>, <strong>presión arterial baja</strong> y <strong>número de latidos</strong>. 
-                    A sí,  podras ver el comprtamiento de tu alimentación y tu estado emocional de tu dia a dia. 
-                </p>
-                <p class="uso-App">
-                    Esto podria serle utíl a tú medico de confianza. No olvides que para tener una buena salud se te recomienda que practiques un de porte de tu preferencia y comas saludablemente.
-                </p>
-            </div>
-        </section>
-    </main>
-    
+        <p class="intro-App">Tus datos registrados muestran la siguiente gráfica aquí abajo.</p>
+    </section>
     <canvas id="miTabla" width="600" height="600"></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.js"></script>
     <script type="module">
@@ -134,7 +110,6 @@
 
             renderTabla();             
     </script>
-    <script src="./index.js"></script>
     <footer class="footer">
 		<h4 class="contacto">Contacta me</h4>
 		<aside>

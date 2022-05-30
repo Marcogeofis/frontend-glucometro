@@ -29,11 +29,13 @@ body{
 .container_imagenes figure img{
     width: 70px;
     height: 70px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px 1px rgba(0, 0, 0, 0.3);
 }
 .intro-App{
     width:auto;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     padding: 15px;   
 }
 .container_corazon figure {
@@ -48,7 +50,7 @@ body{
     height: 150px;
 }
 .uso-App{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-align: center;
     margin-top: 10px;
     width: auto;
@@ -56,8 +58,8 @@ body{
 }
 .instrucciones-uso{
     width: auto;
-    height: 240px;
-    font-size: 1.5rem;
+    height: auto;
+    font-size: 1.6rem;
     padding: 15px;
 }
 .points{
@@ -67,7 +69,7 @@ body{
     color: #125B50;
     background-color: #d4f5d4;
     width: auto;
-    height: 310px;
+    height: 325px;
     padding: 15px;
     margin: 20px 0;
 }
@@ -75,42 +77,47 @@ body{
     margin: 10px 0;
     display: flex;
     justify-content: space-between;
+    font-size: 1.3rem;
 }
 .box_data{
     width: 150px;
     height: 24px;
     background-color:  #d3ece9;
     border-radius: 5px;
-    text-align: center;
-    
+    text-align: center;   
 }
-.datos-intro{
-    font-size: 1.3rem;
-}
-.data-graphic{
-    margin-top: 25px;
-    width: auto;
-}
-.data-graphic h3{
-    text-align: center;
-    width: auto;
-    font-size: 1.3rem;
-}
-.graphic-periode{
+.container-loggin{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
-.graphycator{
+.container-loggin .logging-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+.container-loggin .logging-user a{
+    height: 60px;
+}
+.container-loggin .logging-user a:hover{
+    background-color:#d3ece9;
     color: #125B50;
-    border: none;
+    box-shadow: 2px 2px 30px 1px rgba(0, 0, 0, 0.3);
     border-radius: 30px;
-    width: 200px;
-    height: 40px;
-    margin: 10px 0;
-    font-size: 1.4rem;
+    
+}
+.container-loggin .logging-user a{
+    font-size: 1.7rem;
     font-weight: 600;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
 }
 .periodo{
     margin: 10px 0;
@@ -119,9 +126,130 @@ body{
 .miTabla{
     width: auto;
     height: 600px;
-    
 }
 canvas{
     margin-top: 30px;
     background-color: #191A19;
+}
+
+/* Session.html */
+.title-session{
+    text-align: center;
+    width: auto;
+    font-size: 2.3rem;
+}
+.modal-register{
+    margin-bottom: 40px;
+}
+.container-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}    
+.container-register .register-user{
+    font-size: 1.6rem;
+}
+.container-register input{
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    margin: 20px 0;
+    box-shadow: 2px 2px 30px 1px rgba(0, 0, 0, 0.4);
+}
+.graphycator{
+    color: #125B50;
+    border: none;
+    border-radius: 30px;
+    width: 300px;
+    height: 45px;
+    margin: 20px 0;
+    font-size: 1.7rem;
+    font-weight: 600;
+    box-shadow: 2px 2px 30px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* cuenta-user */
+.data-user{
+    margin-top: 25px;
+    width: auto;
+}
+.data-user h3{
+    text-align: center;
+    font-size: 1.7rem;
+}
+.graphic-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+/* footer */
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #678983;
+    width: 100%;
+    height: 400px;
+}
+.contacto{
+    margin-bottom: 60px;
+    font-size: 3rem;
+}
+aside{
+    width: 100%;
+}
+.container__network{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+}
+.network{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+}
+.network span{
+    font-size: 1.5rem;
+    color: white;
+}
+.twitter img{
+    width: 60px;
+    height: 60px;
+}
+.Instagram img{
+    width: 50px;
+    height: 50px;
+}
+.github img{
+    width: 60px;
+    height: 60px;
+}
+.linkedin img{
+    width: 50px;
+    height: 48px;
+}
+.footer__End{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+}
+.footer__End .pie{
+    font-size: 1.5rem;
+}
+.footer__End #rights{
+    font-size: 1.5rem;
 }

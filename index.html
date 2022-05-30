@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 930px)">
+    <link rel="stylesheet" href="./src/css/tablet.css" media="(min-width: 930px)">
     <title>Glucometro</title>
 </head>
 <body>
@@ -15,10 +15,10 @@
 
         <div class="container_imagenes">
             <figure>
-                <img src="../assets/Glucometro.png" alt="glucometro">
-                <img src="../assets/presion.png" alt="medidor de presion">
-                <img src="../assets/sport.png" alt="persona ejercitandose">
-                <img src="../assets/alimentos.png" alt="verduras">
+                <img src="./assets/Glucometro.png" alt="glucometro">
+                <img src="./assets/presion.png" alt="medidor de presion">
+                <img src="./assets/sport.png" alt="persona ejercitandose">
+                <img src="./assets/alimentos.png" alt="verduras">
             </figure>
         </div>
         <div class="introduccion">
@@ -32,7 +32,7 @@
 
         <div class="container_corazon">
             <figure>
-                <img src="../assets/heart.png" alt="corazon">
+                <img src="./assets/heart.png" alt="corazon">
             </figure>
         </div>
         <p class="uso-App">
@@ -47,8 +47,8 @@
         </ul>
         <section class="container-loggin">
             <div class="logging-user">
-                <a href="sesion.html" target="_blank">Iniciar sesión</a>
-                <a href="cuenta-user.html" target="_blank">Registrar me</a>
+                <a href="./src/sesion.html" target="_blank">Iniciar sesión</a>
+                <a href="./src/cuenta-user.html" target="_blank">Registrar me</a>
             </div>
         </section>
         <section>
@@ -70,7 +70,7 @@
     <canvas id="miTabla" width="600" height="600"></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.js"></script>
     <script type="module">
-        import bd from './Data.js'
+        import bd from './src/Data.js'
     
             function glucometer(ctx){
                 const {
@@ -134,32 +134,32 @@
 
             renderTabla();             
     </script>
-    <script src="./index.js"></script>
+    <script src="./src/index.js"></script>
     <footer class="footer">
 		<h4 class="contacto">Contacta me</h4>
 		<aside>
 			<div class="container__network">
 				<figcaption class="twitter">
 					<a class="network" href="https://twitter.com/MarcoAn55841249" target="_blank">
-						<img src="../assets/twitter.png" alt="pajarito">
+						<img src="./assets/twitter.png" alt="pajarito">
                         <span>twitter</span>
 					</a>
 				</figcaption>
 				<figcaption class="Instagram">
 					<a class="network" href="">
-						<img src="../assets/instagram.png" alt="camara_fotográfica">
+						<img src="./assets/instagram.png" alt="camara_fotográfica">
                         <span>Instagram</span>
 					</a>
 				</figcaption>
 				<figcaption class="github">
 					<a class="network" href="https://github.com/Marcogeofis" target="_blank">
-						<img src="../assets/github.png" alt="animalito gato">
+						<img src="./assets/github.png" alt="animalito gato">
                         <span>github</span>
 					</a>
 				</figcaption>
 				<figcaption class="linkedin">
 					<a class="network" href="https://www.linkedin.com/in/marco-cortes/" target="_blank">
-						<img src="../assets/linkedin.png" alt="logo">
+						<img src="./assets/linkedin.png" alt="logo">
                         <span>linked in</span>
 					</a>
 				</figcaption>
